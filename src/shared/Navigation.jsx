@@ -15,7 +15,7 @@ const Navigation = () => {
                         <Link to="/"><Button variant="text">Help Center</Button></Link>
                         <Switch {...label} defaultChecked />
                     </div>
-                    <Avatar alt="Remy Sharp" src="/vite.svg" />
+                    <Avatar alt="Remy Sharp" src="https://drive.google.com/file/d/1hS88pQkL2-IShnBVw_GgRluRShcjnFpp/view?usp=drive_link" />
                 </div>
             </div>
         </nav>

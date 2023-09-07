@@ -30,7 +30,7 @@ img{
     @apply mb-2 font-medium py-1 px-2 border border-sky-400
 }
 .img-parent:hover .article-tag{
-    @apply bg-white text-sky-500 duration-300 ease-in-out transition-all
+    @apply bg-[#2CC8B3] text-white duration-300 ease-in-out transition-all
 }
 .article-parent:hover .image-control{
     transition: transform 0.3s ease-in-out;

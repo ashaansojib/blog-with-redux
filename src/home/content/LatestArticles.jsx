@@ -1,5 +1,6 @@
 import React from 'react';
 import Article from '../../cards/Article';
+import { Pagination } from '@mui/material';
 
 const LatestArticles = () => {
     return (
@@ -13,7 +14,8 @@ const LatestArticles = () => {
                 <Article />
                 <Article />
             </div>
-            <div className='flex justify-end gap-2'>
+            <div className='py-2 flex justify-center'>
+                <Pagination count={10} variant="outlined" color="primary" />
             </div>
         </>
     );

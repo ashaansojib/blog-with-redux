@@ -1,11 +1,16 @@
 import React from 'react';
+import Social from './Social';
+import MostPopular from './MostPopular';
+import SidebarAds from './SidebarAds';
+import Comments from './Comments';
 
 const Aside = () => {
     return (
-        <aside className='' >
-            <div className='border-b'>
-                <button className='p-2 bg-slate-800 text-white font-medium'>Featured Post</button>
-            </div>
+        <aside className='ml-4'>
+            <Social />
+            <SidebarAds />
+            <MostPopular />
+            <Comments />
         </aside>
     );
 };
