@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.my-container{
+    @apply w-[1100px] mx-auto
+}
+
+/* image transition */
+.img-parent{
+    @apply rounded-md overflow-hidden relative
+}
+.img-parent:hover .image-control {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.2);
+}
+.image-control {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+.img-content{
+    @apply absolute bottom-0 left-0 p-2 text-white w-full
+}
