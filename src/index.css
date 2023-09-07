@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
 .my-container{
     @apply w-[1100px] mx-auto
 }
@@ -27,4 +31,8 @@
 }
 .img-parent:hover .article-tag{
     @apply bg-white text-sky-500 duration-300 ease-in-out transition-all
+}
+.article-parent:hover .image-control{
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.2);
 }

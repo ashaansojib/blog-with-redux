@@ -1,6 +1,7 @@
 import React from 'react';
 import Featured from './Featured';
 import Tools from './Tools';
+import LatestArticles from './LatestArticles';
 
 const MainContent = () => {
     return (
@@ -9,6 +10,8 @@ const MainContent = () => {
             <Featured />
             {/* Tools sections */}
             <Tools />
+            {/* main posts sections */}
+            <LatestArticles />
         </main>
     );
 };
