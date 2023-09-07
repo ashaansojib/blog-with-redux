@@ -22,3 +22,9 @@
 .img-content{
     @apply absolute bottom-0 left-0 p-2 text-white w-full
 }
+.article-tag{
+    @apply mb-2 font-medium py-1 px-2 border border-sky-400
+}
+.img-parent:hover .article-tag{
+    @apply bg-white text-sky-500 duration-300 ease-in-out transition-all
+}

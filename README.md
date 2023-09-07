@@ -1,2 +1,2 @@
 ## Installed Packages
-* React + Tailwind + Router + MUI
+* React + Tailwind + Router + MUI + MUI icons
