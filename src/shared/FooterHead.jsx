@@ -1,20 +1,21 @@
 import React from 'react';
-import { FaClock, FaEnvelope, FaFacebookF, FaLinkedinIn, FaLocationArrow, FaPhoneAlt, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaArrowRight, FaClock, FaEnvelope, FaFacebookF, FaLinkedinIn, FaLocationArrow, FaPhoneAlt, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
 
 const FooterHead = () => {
     return (
         <div className='bg-[#151515]'>
-            <div className="my-container grid grid-cols-4 gap-3 justify-between py-4">
+            <div className="my-container grid grid-cols-3 gap-4 justify-between py-8">
                 <div>
                     <span className='text-white font-medium text-2xl border-b '>About US</span>
                     <div className='text-[14px] text-slate-200 py-3'>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis consequatur blanditiis totam earum alias illum eius aliquam dicta nostrum! Ex dolorum animi, similique rerum eius atque facere quia itaque cum!</p>
                     </div>
                     <div className='pt-2 flex gap-2'>
-                        <FaFacebookF className='text-4xl text-white border p-1' />
-                        <FaTwitter className='text-4xl text-white border p-1' />
-                        <FaLinkedinIn className='text-4xl text-white border p-1' />
-                        <FaYoutube className='text-4xl text-white border p-1' />
+                        <FaFacebookF className='footer-icon' />
+                        <FaTwitter className='footer-icon' />
+                        <FaLinkedinIn className='footer-icon' />
+                        <FaYoutube className='footer-icon' />
                     </div>
                 </div>
                 <div>
@@ -37,15 +38,28 @@ const FooterHead = () => {
                     </div>
                 </div>
                 <div>
-                    <span className='text-white font-medium text-2xl border-b '>About US</span>
-                    <div className='text-[14px] text-slate-200 py-3'>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis consequatur blanditiis totam earum alias illum eius aliquam dicta nostrum! Ex dolorum animi, similique rerum eius atque facere quia itaque cum!</p>
-                    </div>
-                    <div className='pt-2 flex gap-2'>
-                        <FaFacebookF className='text-4xl text-white border p-1' />
-                        <FaTwitter className='text-4xl text-white border p-1' />
-                        <FaLinkedinIn className='text-4xl text-white border p-1' />
-                        <FaYoutube className='text-4xl text-white border p-1' />
+                    <span className='text-white font-medium text-2xl border-b '>Usefull Links</span>
+                    <div className='py-3 text-slate-200'>
+                        <div className='flex items-center gap-2'>
+                            <FaArrowRight />
+                            <Link className='hover:underline hover:text-green-600'>How to manage this website?</Link>
+                        </div>
+                        <div className='flex items-center gap-2'>
+                            <FaArrowRight />
+                            <Link className='hover:underline hover:text-green-600'>Instruction Documents</Link>
+                        </div>
+                        <div className='flex items-center gap-2'>
+                            <FaArrowRight />
+                            <Link className='hover:underline hover:text-green-600'>Read more about our policy.</Link>
+                        </div>
+                        <div className='flex items-center gap-2'>
+                            <FaArrowRight />
+                            <Link className='hover:underline hover:text-green-600'>Where you can find initial files</Link>
+                        </div>
+                        
+                        
+                        
+
                     </div>
                 </div>
             </div>

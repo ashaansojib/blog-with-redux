@@ -42,3 +42,6 @@ img{
 .footer-link{
     @apply hover:text-green-500 inline-block mr-2 text-sm
 }
+.footer-icon{
+    @apply cursor-pointer text-4xl text-white border hover:bg-[#F94545] transition-all p-1
+}
