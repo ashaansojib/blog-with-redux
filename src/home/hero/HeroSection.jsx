@@ -1,5 +1,5 @@
-import { Button, Chip } from '@mui/material';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
 
@@ -9,7 +9,7 @@ const HeroSection = () => {
                 <img className='image-control' src="https://d27fp5ulgfd7w2.cloudfront.net/wp-content/uploads/2019/01/08160759/tech-blogs-1.jpg" alt="" />
                 <div className='img-content'>
                     <button className='article-tag'>iPhone</button>
-                    <h2 className='text-3xl font-semibold'>What is Roting & How does it works?</h2>
+                    <Link to="/details"><h2 className='text-3xl font-semibold'>What is Roting & How does it works?</h2></Link>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, cumque repellat. Provident molestias corporis dolores.</p>
                 </div>
             </div>
