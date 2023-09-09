@@ -3,7 +3,7 @@ import React from 'react';
 
 const Comments = () => {
     return (
-        <div className=''>
+        <>
             <div className='border-b'>
                 <button className='p-2 bg-slate-800 text-white font-medium'>Recent Comments</button>
             </div>
@@ -30,7 +30,7 @@ const Comments = () => {
                     <p className='italic font-[10px] text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque incidunt.</p>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
