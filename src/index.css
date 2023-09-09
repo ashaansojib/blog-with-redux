@@ -45,3 +45,8 @@ img{
 .footer-icon{
     @apply cursor-pointer text-4xl text-white border hover:bg-[#F94545] transition-all p-1
 }
+
+/* dashboard css area */
+.dashboard-container{
+    @apply max-w-screen-xl mx-auto
+}

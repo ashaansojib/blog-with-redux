@@ -3,6 +3,8 @@ import Main from "../layout/Main";
 import Home from "../home/Home";
 import ErrorPage from "../pages/ErrorPage";
 import Details from "../pages/Details";
+import Dashboard from "../layout/Dashboard";
+import AddPosts from "../dashboard/AddPosts";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +18,16 @@ const router = createBrowserRouter([
             {
                 path: '/details',
                 element: <Details />
+            }
+        ]
+    },
+    {
+        path: '/dashboard',
+        element: <Dashboard />,
+        children: [
+            {
+                path: '/dashboard/add-posts',
+                element: <AddPosts />
             }
         ]
     },
