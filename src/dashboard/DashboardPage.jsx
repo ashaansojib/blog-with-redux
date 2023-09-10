@@ -1,8 +1,10 @@
 import React from 'react';
 import { FaRegCalendarCheck } from 'react-icons/fa';
+import PostListTable from './PostListTable';
 
 const DashboardPage = () => {
     return (
+        <>
         <div className='grid grid-cols-3 gap-6'>
             <div className='p-4 bg-[#EDF3FF] flex gap-2 items-center'>
                 <FaRegCalendarCheck className='text-3xl text-green-400' />
@@ -26,6 +28,8 @@ const DashboardPage = () => {
                 </div>
             </div>
         </div>
+        <PostListTable />
+        </>
     );
 };
 
