@@ -28,6 +28,8 @@ const DashboardPage = () => {
                 </div>
             </div>
         </div>
+        {/* all post list area */}
+        <h3 className='pt-4 font-medium'>Published Post</h3>
         <PostListTable />
         </>
     );
