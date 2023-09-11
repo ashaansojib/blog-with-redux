@@ -7,6 +7,7 @@ import Dashboard from "../layout/Dashboard";
 import AddPosts from "../dashboard/AddPosts";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
+import PrivetRoute from "./PrivetRoute";
 
 const router = createBrowserRouter([
     {
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/dashboard',
-        element: <Dashboard />,
+        element: <PrivetRoute><Dashboard /></PrivetRoute>,
         children: [
             {
                 path: '/dashboard/add-posts',
