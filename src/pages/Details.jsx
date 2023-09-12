@@ -7,7 +7,7 @@ import PostComment from '../components/PostComment';
 import RelatedPost from '../components/RelatedPost';
 
 const Details = () => {
-
+    
     return (
         <div className='my-container py-8'>
             <div className="grid grid-cols-3 gap-4">

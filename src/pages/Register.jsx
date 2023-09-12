@@ -5,7 +5,10 @@ import { Link } from 'react-router-dom';
 
 const Register = () => {
     const { register, handleSubmit, watch, formState: { errors }, } = useForm();
-    const onSubmit = (data) => console.log(data)
+    
+    const onSubmit = (data) => {
+        console.log(data)
+    }
     return (
         <div className='max-w-screen-sm mx-auto my-8 bg-slate-50 p-4 rounded-lg'>
             <form onSubmit={handleSubmit(onSubmit)} className='space-y-4'>
