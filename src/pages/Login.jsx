@@ -2,10 +2,13 @@ import { Button, TextField } from '@mui/material';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import { useGetUsersQuery } from '../redux/features/api/baseApi';
 
 const Login = () => {
     const { register, handleSubmit, watch, formState: { errors }, } = useForm();
     const onSubmit = (data) => console.log(data)
+    const { data: users, isLoading, isError, error } = useGetUsersQuery();
+    console.log(users)
     return (
         <div className='max-w-screen-sm mx-auto my-8 bg-slate-50 p-4 rounded-lg'>
             <form onSubmit={handleSubmit(onSubmit)} className='space-y-4'>
