@@ -1,21 +1,30 @@
-import { Button, TextField } from '@mui/material';
-import React, { useContext } from 'react';
+import { Alert, Button, TextField } from '@mui/material';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { createUser } from '../redux/features/users/userSlice';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../utils/AuthProvider';
 
 const Register = () => {
+    const [error, setError] = useState("");
+    const [success, setSuccess] = useState("");
+
     const { register, handleSubmit, watch, reset, formState: { errors }, } = useForm();
-    // const dispatch = useDispatch();
-    const {createUser} = useContext(AuthContext)
+    const { createUser } = useContext(AuthContext);
+
+    const location = useNavigate();
 
     const onSubmit = ({ email, password, name, photo }) => {
-        // dispatch(createUser({ email, password, name, photo }));
         createUser(email, password)
-        .then(res => res.json())
-        .then(data => console.log(data))
+            .then((userInfo) => {
+                const loggedUser = userInfo.user;
+                setError("");
+                setSuccess("User Created Successfully");
+                location("/dashboard")
+            })
+            .catch((error) => {
+                setSuccess("")
+                setError(error.message)
+            })
         reset();
     }
 
@@ -27,6 +36,8 @@ const Register = () => {
                 <TextField {...register("photo", { required: true })} id="standard-basic" type='text' label="Only Photo Url" variant="standard" className='inline-block w-full' />
                 <TextField {...register("password", { required: true })} id='outlined-password-input' label="Password" type='password' variant='standard' className='inline-block w-full' />
                 <p>Already an Account? <Link to="/login" className='text-green-600 underline pb-2'>Login</Link></p>
+                <p className='text-red-600'>{error}</p>
+                <p className='text-green-600'>{success}</p>
                 <Button variant="outlined" type='submit'>Register</Button>
             </form>
         </div>

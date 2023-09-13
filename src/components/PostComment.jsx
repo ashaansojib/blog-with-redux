@@ -8,21 +8,21 @@ const PostComment = () => {
                 <div className='py-3 space-y-4'>
                     <div className='p-2 bg-slate-100 rounded-xl'>
                         <div className='flex items-center gap-2'>
-                            <Avatar alt="Remy Sharp" src="https://drive.google.com/file/d/1hS88pQkL2-IShnBVw_GgRluRShcjnFpp/view?usp=drive_link" />
+                            <Avatar alt="Remy Sharp" src="" />
                             <h4 className='font-medium text-green-500'>Ashaduzzaman Sojib</h4>
                         </div>
                         <p className='italic font-[10px] text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque incidunt.</p>
                     </div>
                     <div className='p-2 bg-slate-100 rounded-xl'>
                         <div className='flex items-center gap-2'>
-                            <Avatar alt="Remy Sharp" src="https://drive.google.com/file/d/1hS88pQkL2-IShnBVw_GgRluRShcjnFpp/view?usp=drive_link" />
+                            <Avatar alt="Remy Sharp" src="" />
                             <h4 className='font-medium text-green-500'>Ashaduzzaman Sojib</h4>
                         </div>
                         <p className='italic font-[10px] text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque incidunt.</p>
                     </div>
                     <div className='p-2 bg-slate-100 rounded-xl'>
                         <div className='flex items-center gap-2'>
-                            <Avatar alt="Remy Sharp" src="https://drive.google.com/file/d/1hS88pQkL2-IShnBVw_GgRluRShcjnFpp/view?usp=drive_link" />
+                            <Avatar alt="Remy Sharp" src="" />
                             <h4 className='font-medium text-green-500'>Ashaduzzaman Sojib</h4>
                         </div>
                         <p className='italic font-[10px] text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque incidunt.</p>

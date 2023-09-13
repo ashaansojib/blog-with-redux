@@ -1,5 +1,5 @@
 import { Dropdown, Menu, MenuButton, MenuItem } from '@mui/joy';
-import { Avatar, Button, Switch } from '@mui/material';
+import { Button, Switch } from '@mui/material';
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../utils/AuthProvider';

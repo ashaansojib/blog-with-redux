@@ -31,22 +31,13 @@ const AuthProvider = ({children}) => {
     useEffect( ()=>{
         const unsubscribe = onAuthStateChanged( auth, currentUser =>{
             setUser(currentUser);
-            // jwt token management
-            // if(currentUser){
-            //     axios.post('https://b7a12-summer-camp-server-side-ashaansojib-ashaansojib.vercel.app/jwt', {email: currentUser.email})
-            //     .then(data => {
-            //         localStorage.setItem('access-token', data.data)
-            //     })
-            // }
-            // else{
-            //     localStorage.removeItem('access-token')
-            // }
             setLoading(false);
         });
         return()=>{
             unsubscribe();
         }
     },[])
+    
     // logout 
     const logOut = () =>{
         return signOut(auth)
