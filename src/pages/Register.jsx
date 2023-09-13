@@ -1,14 +1,24 @@
 import { Button, TextField } from '@mui/material';
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { createUser } from '../redux/features/users/userSlice';
+import { AuthContext } from '../utils/AuthProvider';
 
 const Register = () => {
-    const { register, handleSubmit, watch, formState: { errors }, } = useForm();
-    
-    const onSubmit = (data) => {
-        console.log(data)
+    const { register, handleSubmit, watch, reset, formState: { errors }, } = useForm();
+    // const dispatch = useDispatch();
+    const {createUser} = useContext(AuthContext)
+
+    const onSubmit = ({ email, password, name, photo }) => {
+        // dispatch(createUser({ email, password, name, photo }));
+        createUser(email, password)
+        .then(res => res.json())
+        .then(data => console.log(data))
+        reset();
     }
+
     return (
         <div className='max-w-screen-sm mx-auto my-8 bg-slate-50 p-4 rounded-lg'>
             <form onSubmit={handleSubmit(onSubmit)} className='space-y-4'>

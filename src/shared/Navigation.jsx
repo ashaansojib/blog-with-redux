@@ -1,11 +1,15 @@
 import { Dropdown, Menu, MenuButton, MenuItem } from '@mui/joy';
 import { Avatar, Button, Switch } from '@mui/material';
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../utils/AuthProvider';
 
 const Navigation = () => {
     // user area
-    
+    const {logOut} = useContext(AuthContext);
+    const handleLogOut = () =>{
+        logOut()
+    }
     const label = { inputProps: { 'aria-label': 'Switch demo' } };
     return (
         <nav className='px-2 py-4 border-b border-slate-100'>
@@ -25,7 +29,7 @@ const Navigation = () => {
                             <Menu>
                                 <MenuItem>Profile</MenuItem>
                                 <MenuItem><Link to="/dashboard">Dashboard</Link></MenuItem>
-                                <MenuItem>Logout</MenuItem>
+                                <MenuItem onClick={handleLogOut}>Logout</MenuItem>
                             </Menu>
                         </Dropdown>
                     </div>
