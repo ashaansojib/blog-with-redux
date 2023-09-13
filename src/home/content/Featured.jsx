@@ -3,7 +3,9 @@ import React from 'react';
 import FeaturedCard from '../../cards/FeaturedCard';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NavigateBeforeOutlinedIcon from '@mui/icons-material/NavigateBeforeOutlined';
+import { useGetArticlesQuery } from '../../redux/features/api/baseApi';
 const Featured = () => {
+    const {data} = useGetArticlesQuery();
     return (
         <>
             <div className='border-b border-[#2CC8B3]'>
