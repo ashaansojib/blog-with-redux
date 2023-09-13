@@ -50,3 +50,6 @@ img{
 .dashboard-container{
     @apply max-w-screen-xl mx-auto
 }
+.article-field{
+    @apply border border-blue-600 p-2 mb-2 rounded-md
+}

@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaArrowRight, FaHome, FaRegEdit, FaRocketchat, FaShareSquare, FaUserEdit } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../utils/AuthProvider';
 const SidebarList = () => {
+    const { logOut } = useContext(AuthContext);
     return (
         <div className='p-4'>
             <div className='flex gap-2 items-center hover:text-[#2CC8B3] justify-between hover:bg-slate-100 py-2 px-1'>
@@ -25,7 +27,13 @@ const SidebarList = () => {
                 </div>
                 <FaArrowRight />
             </div>
-            
+            <div className='flex gap-2 items-center hover:text-[#2CC8B3] justify-between hover:bg-slate-100 py-2 px-1'>
+                <div className='flex gap-2 items-center'>
+                    <FaShareSquare />
+                    <Link to="/dashboard" className='inline-block text-[16px]'>Widgets</Link>
+                </div>
+                <FaArrowRight />
+            </div>
             <div className='flex gap-2 items-center hover:text-[#2CC8B3] justify-between hover:bg-slate-100 py-2 px-1'>
                 <div className='flex gap-2 items-center'>
                     <FaUserEdit />
@@ -36,14 +44,7 @@ const SidebarList = () => {
             <div className='flex gap-2 items-center hover:text-[#2CC8B3] justify-between hover:bg-slate-100 py-2 px-1'>
                 <div className='flex gap-2 items-center'>
                     <FaShareSquare />
-                    <Link to="/dashboard" className='inline-block text-[16px]'>Widgets</Link>
-                </div>
-                <FaArrowRight />
-            </div>
-            <div className='flex gap-2 items-center hover:text-[#2CC8B3] justify-between hover:bg-slate-100 py-2 px-1'>
-                <div className='flex gap-2 items-center'>
-                    <FaShareSquare />
-                    <Link to="/dashboard" className='inline-block text-[16px]'>Logout</Link>
+                    <Link onClick={logOut} className='inline-block text-[16px]'>Logout</Link>
                 </div>
                 <FaArrowRight />
             </div>
