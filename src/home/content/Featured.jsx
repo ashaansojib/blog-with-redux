@@ -9,17 +9,17 @@ const Featured = () => {
     const { data: articles, isLoading } = useGetArticlesQuery();
     const [startIndex, setStartIndex] = useState(0);
 
-    const displayItems = articles?.slice(startIndex, startIndex + 3);
+    const displayItems = articles?.slice(startIndex, startIndex + 2);
 
     const handleNextClick = () => {
         if (startIndex + 3 < articles.length) {
-            setStartIndex(startIndex + 3);
+            setStartIndex(startIndex + 2);
         }
     };
 
     const handlePreviousClick = () => {
-        if (startIndex - 3 >= 0) {
-            setStartIndex(startIndex - 3);
+        if (startIndex - 2 >= 0) {
+            setStartIndex(startIndex - 2);
         }
     };
     console.log(displayItems)

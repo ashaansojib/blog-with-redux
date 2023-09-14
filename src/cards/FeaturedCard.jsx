@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 const FeaturedCard = ({article}) => {
     const {title, image, date, info} = article;
+    const maxCharacters = 150;
+    const truncatedInfo = info.length > maxCharacters ? info.substring(0, maxCharacters) + '....' : info;
     return (
         <Card>
             <CardMedia
@@ -17,7 +19,7 @@ const FeaturedCard = ({article}) => {
                     {title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    {info}
+                    {truncatedInfo}
                 </Typography>
             </CardContent>
             <CardActions>
