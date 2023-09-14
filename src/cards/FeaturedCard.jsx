@@ -1,5 +1,6 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const FeaturedCard = () => {
     return (
@@ -21,7 +22,7 @@ const FeaturedCard = () => {
             </CardContent>
             <CardActions>
                 <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Button size="small"><Link to="/details">Learn More</Link></Button>
             </CardActions>
         </Card>
     );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { usePostArticlesMutation } from '../redux/features/api/baseApi';
 import { useForm } from 'react-hook-form';
+import { Alert } from '@mui/material';
 
 const AddPosts = () => {
     const [setArticles, { data: articles }] = usePostArticlesMutation();
@@ -9,7 +10,6 @@ const AddPosts = () => {
 
     const onSubmit = (data) => {
         setArticles(data)
-        console.log(data)
         reset();
     }
 
