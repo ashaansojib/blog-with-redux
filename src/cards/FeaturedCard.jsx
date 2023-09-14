@@ -8,12 +8,7 @@ const FeaturedCard = ({article}) => {
     const truncatedInfo = info.length > maxCharacters ? info.substring(0, maxCharacters) + '....' : info;
     return (
         <Card>
-            <CardMedia
-                component="img"
-                alt="green iguana"
-                height="140"
-                image={image}
-            />
+            <CardMedia component="img" alt="image not found" height="200px" image={image}/>
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                     {title}

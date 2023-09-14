@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 const baseApi = createApi({
   reducerPath: 'api',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:9988',
+    baseUrl: 'https://blog-with-redux-server-2ridhtk82-ashaansojib.vercel.app',
   }),
   endpoints: (builder) => ({
     getArticles: builder.query({
